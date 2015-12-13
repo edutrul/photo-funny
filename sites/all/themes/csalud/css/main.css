@@ -1,5 +1,5 @@
 body {
-  background: #e6f3fd;
+  background: #f4f4e2;
   font-family: 'Lato', sans-serif;
 }
 
@@ -7,7 +7,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: #3897db;
+  color: #468847;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
 }
@@ -42,7 +42,7 @@ h4 {
 }
 
 .main-header {
-  background: #3fa9f5;
+  background: #599e4e;
 }
 
 /*-----------------------------------------------------------------------------
@@ -162,7 +162,7 @@ main {
  *           HOMEPAGE            
  *---------------------------------------------------------------------------*/
 .front .region-content {
-  background: #d5ebfc;
+  background: #F5F5DC;
   padding: 20px;
 }
 
@@ -221,7 +221,7 @@ main {
 }
 
 .campaign-link a {
-  background: #3fa9f5;
+  background: #599e4e;
   color: #fff;
   display: block;
   padding: 5px 10px;
@@ -369,7 +369,7 @@ main {
  *---------------------------------------------------------------------------*/
 .main-footer {
   color: #fff;
-  background: #3fa9f5;
+  background: #599e4e;
   text-align: center;
   padding: 10px;
   margin-top: 20px;

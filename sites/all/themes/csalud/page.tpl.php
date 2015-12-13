@@ -3,7 +3,7 @@
   <div class="container">
     <?php if (!empty($site_name)): ?>
     <h1 class="main-heading">
-      <img width="150px" src="/sites/all/themes/csalud/img/puentesperu_WT.png">
+      <!--<img width="150px" src="/sites/all/themes/csalud/img/puentesperu_WT.png"> -->
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">Photo<span class="logo-2">Funny</span><span class="logo-3">.tk</span></a>
     </h1>
     <?php endif; ?>
