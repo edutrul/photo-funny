@@ -1,0 +1,33 @@
+<?php
+/**
+ * @file contents for puentesperu_maps.module
+ */
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function puentesperu_maps_views_pre_render(&$view) {
+  if ($view->name == 'puentes' && $view->current_display == 'page') {
+    drupal_add_js(drupal_get_path('module', 'puentesperu_maps') . '/js/puentesperu-maps.js');
+  }
+  if ($view->name == 'puentes' && $view->current_display == 'attachment_1') {
+    $view->attachment_after = '<div class="legend">'
+        . '<div><img width="15px" src="sites/all/themes/csalud/img/rojo.png">NO TRANSITABLE</div>'
+        . '<div><img width="15px" src="sites/all/themes/csalud/img/ambar.png">OBSERVACIÓN</div>'
+        . '<div><img width="15px" src="sites/all/themes/csalud/img/verde.png">NORMAL</div></div>';
+  }
+}
+
+function puentesperu_get_image_marker_url($nid) {
+  $node = node_load($nid);
+  if (isset($node->field_current_status[LANGUAGE_NONE][0]['value'])) {
+    switch ($node->field_current_status[LANGUAGE_NONE][0]['value']) {
+      case 'notransitable':
+        return 'sites/all/themes/csalud/img/rojo.png';
+      case 'observacion':
+        return 'sites/all/themes/csalud/img/ambar.png';
+      case 'normal':
+        return 'sites/all/themes/csalud/img/verde.png';
+    }
+  }
+}
